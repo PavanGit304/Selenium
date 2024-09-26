@@ -10,10 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 //findElement():it finds/identify webelement within the web page 
 //findElements(): it finds/identify list of web elements within web page 
 public class multi_Element_List {
-	public static void main(String[]args)  
-	{
-		
-			try {
+	public static void main(String[] args) {
+		try {
 	System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver109\\chromedriver.exe");  // to copy the path : Shift+Right click  on chrome driver copy as path and paste it  
 				
 			WebDriver d= new ChromeDriver();

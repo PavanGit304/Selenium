@@ -13,7 +13,7 @@ public class multi_select_dropdown {
 //	Select class: It is used for selecting and deselecting the  option in a dropdown 
 	public static void main(String[]args)  	{
 			try {
-	System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver114\\chromedriver.exe");  // to copy the path : Shift+Right click  on chrome driver copy as path and paste it  
+	System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver118\\chromedriver-win64\\chromedriver.exe");  // to copy the path : Shift+Right click  on chrome driver copy as path and paste it  
 				
 			WebDriver d= new ChromeDriver();
 			d.manage().window().maximize(); 

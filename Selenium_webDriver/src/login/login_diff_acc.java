@@ -92,15 +92,9 @@ public class login_diff_acc {
 		case "9":
 			d.findElement(By.xpath("//td[@class='ui-cell']//following::*[@id='pff1']")).sendKeys("1");
 			break;
-			
-			
-		
+				
 		}
-		
-		
-		
-		
-		
+			
 	}
 	catch(Exception e) 
 	{

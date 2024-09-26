@@ -10,7 +10,7 @@ public class radio_btn {
 	
 	public static void main(String[] args) throws InterruptedException {  
         
-		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\chromedriver116\\chromedriver-win64\\chromedriver.exe");  // to copy the path : Shift+Right click  on chrome driver copy as path and paste it  
+        System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver126\\chromedriver-win64\\chromedriver.exe");  
         WebDriver driver = new ChromeDriver();  
         driver.get("D:\\downloads\\html\\radio_btn.html");  
   

@@ -18,7 +18,7 @@ public class IE_Browser {
 //			System.setProperty("webdriver.ie.driver","E:\\Selenium\\selenium_softwares\\Drivers\\IEDriverServer64.exe"); // to copy the path :
 
 			//System.setProperty():it sets the properties for the desired browser to be used in test automation.
-            System.setProperty("webdriver.edge.driver","E:\\Selenium\\selenium_softwares\\Drivers\\Edge browser\\edge 108\\msedgedriver.exe"); // to copy the path :
+            System.setProperty("webdriver.edge.driver","E:\\Selenium\\selenium_softwares\\Drivers\\Edge browser\\edge 126\\edgedriver_win64 (1)\\msedgedriver.exe"); // to copy the path :
 		
 			WebDriver d = new EdgeDriver();
 			d.manage().window().maximize();

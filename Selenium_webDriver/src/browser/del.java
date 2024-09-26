@@ -1,4 +1,3 @@
-
 package browser;
 
 import org.openqa.selenium.By;
@@ -16,8 +15,6 @@ public class del {
 		WebElement srch= d.findElement(By.name("q"));// findElement: it is used to find the element in current web page 
 		srch.sendKeys("pawan kalyan",Keys.RETURN);//Keys.RETURN : it click on enter 
 		d.close();
-		
-	}
-	
-	
+	 
+	}	
 }

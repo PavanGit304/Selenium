@@ -23,8 +23,7 @@ public class allowandBlockPopUp {
 
 		// by using set ExperimentalOption we can handle pop up using (prefs obj) 
 		options.setExperimentalOption("prefs", prefs);
-
-		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver103\\chromedriver.exe");  // to copy the path : Shift+Right click  on chrome driver copy as path and paste it  
+        System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver126\\chromedriver-win64\\chromedriver.exe"); 
 		//Now Pass ChromeOptions instance to ChromeDriver Constructor to initialize chrome driver which will switch off this browser notification on the chrome browser
 		WebDriver driver = new ChromeDriver(options); //note:To enable pop-up remove the options & run  
      driver.navigate().to("https://www.spicejet.com/");  

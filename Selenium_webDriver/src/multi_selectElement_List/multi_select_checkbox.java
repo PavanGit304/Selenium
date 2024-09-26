@@ -12,9 +12,8 @@ public class multi_select_checkbox {
 	public static void main(String[]args) 
 	{
 			try {
-	System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver109\\chromedriver.exe");  // to copy the path : Shift+Right click  on chrome driver copy as path and paste it  
-				
-			WebDriver d= new ChromeDriver();
+		  System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver127\\chromedriver-win64\\chromedriver.exe");  // to copy the path : Shift+Right click  on chrome driver copy as path and paste it  
+		    WebDriver d= new ChromeDriver();
 			d.manage().window().maximize(); 
 			d.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			d.get("D:\\downloads\\html\\javascript45(javascriptForm).html.");
@@ -24,7 +23,7 @@ public class multi_select_checkbox {
 			System.out.println("number of checkbox present in webpage  :"+checkList.size());  // it print list of check box
 			for(int i=0; i<checkList.size(); i++) {
 				//if(checkList.get(i).getAttribute("value").equalsIgnoreCase(checkToBeSelected)) 
-				//{
+				//{	
 					checkList.get(i).click();
 					Thread.sleep(2000);
 					//break;

@@ -22,7 +22,8 @@ public class screen_shot {
 		File scr = ((TakesScreenshot) d).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(scr, new File(
-					"E:\\Selenium\\eclipse\\selenium_Workspace\\Selenium_webDriver\\src\\screen_shot\\friday.png"));
+					"C:\\Users\\PAVAN\\git\\Selenium_WebDriver\\Selenium_webDriver\\src\\screen_shot\\Monday.png"));//			"E:\\Selenium\\eclipse\\selenium_Workspace\\Selenium_webDriver\\src\\screen_shot\\friday1.png"
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

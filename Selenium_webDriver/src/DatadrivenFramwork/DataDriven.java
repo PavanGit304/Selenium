@@ -17,8 +17,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class DataDriven {
 	public static void main (String [] args) throws InterruptedException{
 	
-		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver110\\chromedriver.exe");  // to copy the path : Shift+Right click  on chrome driver copy as path and paste it  
-	    WebDriver z= new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver127\\chromedriver-win64\\chromedriver.exe");  
+		WebDriver z= new ChromeDriver();
 	    z.manage().window().maximize(); 	
 		Thread.sleep(1000);
 		try {

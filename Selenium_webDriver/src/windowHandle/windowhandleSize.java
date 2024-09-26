@@ -16,7 +16,7 @@ public class windowhandleSize {
 	
 	public static void main(String[]args) throws InterruptedException {
 		WebDriver d;
-		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver108\\chromedriver.exe");  // to copy the path : Shift+Right click  on chrome driver copy as path and paste it  
+		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver126\\chromedriver-win64\\chromedriver.exe");  // to copy the path : Shift+Right click  on chrome driver copy as path and paste it  
 		d= new ChromeDriver();
 		d.manage().window().maximize();
 		d.get("https://www.kotak.com/en/home.html");	
@@ -24,9 +24,7 @@ public class windowhandleSize {
 		System.out.println("current window:"+d.getWindowHandle());
 		Thread.sleep(1000);
 		Set<String> secondwindow = d.getWindowHandles();
-		for(String handle:secondwindow)   // for loop return list of window handles 
-		{
-			
+		for(String handle:secondwindow) {   // for loop return list of window handles 
 			System.out.println(handle);	
 		}
 		

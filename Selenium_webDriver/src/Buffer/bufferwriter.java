@@ -8,8 +8,8 @@ public class bufferwriter {
  *  it creates separate file for the written text   */	
 	public static void main(String args[]){
 		try{//it creates new k file 
-			BufferedWriter out=new BufferedWriter(new FileWriter("D:\\downloads\\html\\vijya2.html)"));
-			out.write("created by pavan Reddy");
+			BufferedWriter out =new BufferedWriter(new FileWriter("D:\\downloads\\html\\vijya4.html)"));
+			out.write("created by pavan");
 			out.close();
 			System.out.println("file created succeess");
 		}

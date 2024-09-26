@@ -26,7 +26,7 @@ public class locator_partial_linkText {
          driver.findElement(By.partialLinkText("here")).click();  // here is partical link 					
          System.out.println("Title of page is: " + driver.getTitle());							
          driver.quit();	
-         WebElement number6 = d.findElement(By.id(""));
+         WebElement number6 = driver.findElement(By.id(""));
     	
     }
 }

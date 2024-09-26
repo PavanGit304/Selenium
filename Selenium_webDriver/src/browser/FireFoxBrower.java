@@ -18,11 +18,12 @@ public static void main(String[] arg){
 		WebDriver d=  new FirefoxDriver();
 		d.manage().window().maximize();
 		d.get("https://www.google.com/");
-		d.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		WebElement srch = d.findElement(By.xpath("//INPUT[@class='lst']"));
-		srch.sendKeys("pawan kalyan photos",Keys.RETURN);
-		//d.findElement(By.xpath("(//INPUT[@class='gNO89b'])[2]")).click();//INPUT[@class='gLFyf gsfi']
-		System.out.print("hello");
+		
+//		d.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+//		WebElement srch = d.findElement(By.xpath("//INPUT[@class='lst']"));
+//		srch.sendKeys("pawan kalyan photos",Keys.RETURN);
+//		//d.findElement(By.xpath("(//INPUT[@class='gNO89b'])[2]")).click();//INPUT[@class='gLFyf gsfi']
+//		System.out.print("hello");
 	
 }
 }

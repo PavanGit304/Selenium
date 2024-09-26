@@ -17,7 +17,7 @@ public class objectRepositiry {   // object repository : it is collection of obj
 	public static void main(String[]args) throws IOException{
 		try {
 			Properties prop = new Properties();
-			FileInputStream objfile = new FileInputStream("E:\\Selenium\\eclipse\\selenium_Workspace\\Selenium_webDriver\\src\\ObjectRepositiry\\repository.properties");
+			FileInputStream objfile = new FileInputStream("C:\\Users\\PAVAN\\git\\Selenium_WebDriver\\Selenium_webDriver\\src\\ObjectRepositiry\\repository.properties");
 			prop.load(objfile);
 			objfile.close();
 			WebDriver d= new FirefoxDriver();
