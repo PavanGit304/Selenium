@@ -47,8 +47,8 @@ public class BaseClass  {
 	
 	@BeforeSuite(groups= {"Smoke","Sanity","Regression"})
 	public void loadConfig() {
-		ExtentManger.setExtent();
-		DOMConfigurator.configure("log4j.xml");
+		ExtentManger.setExtent(); //it Initializes ExtentReports to generate test reports.
+		DOMConfigurator.configure("log4j.xml");// Configures Log4j for logging based on settings in the log4j.xml file.
 		
 //		loadConfig	
 		try {
