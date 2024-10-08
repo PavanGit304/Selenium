@@ -37,6 +37,7 @@ public class BaseClass  {
 	
 	//ThreadLocal: it stores a separate value for each thread
 	//RemoteWebDriver: it drives the browser in remote setups like slenium grid
+	//why ThreadLocal<RemoteWebDriver>: Parallel Testing(it prevents issues when running tests simultaneously, avoiding conflicts between threads.)
 	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<RemoteWebDriver>();
 	
 	public static WebDriver getDriver() {
