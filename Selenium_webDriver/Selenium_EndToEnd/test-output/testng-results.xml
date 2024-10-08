@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="234" started-at="2021-02-12T11:09:00 IST" finished-at="2021-02-12T11:09:00 IST">
+    <groups>
+      <group name="pay new beneficiary">
+        <method signature="Groupofclass.ex3()[pri:0, instance:groups.Groupofclass@51e2adc7]" name="ex3" class="groups.Groupofclass"/>
+        <method signature="Groupofclass.ex4()[pri:0, instance:groups.Groupofclass@51e2adc7]" name="ex4" class="groups.Groupofclass"/>
+      </group> <!-- pay new beneficiary -->
+      <group name="pay an Existing Beneficiary">
+        <method signature="Groupofclass.ex5()[pri:0, instance:groups.Groupofclass@51e2adc7]" name="ex5" class="groups.Groupofclass"/>
+      </group> <!-- pay an Existing Beneficiary -->
+      <group name="pay some one">
+        <method signature="Groupofclass.ex1()[pri:0, instance:groups.Groupofclass@51e2adc7]" name="ex1" class="groups.Groupofclass"/>
+        <method signature="Groupofclass.ex2()[pri:0, instance:groups.Groupofclass@51e2adc7]" name="ex2" class="groups.Groupofclass"/>
+      </group> <!-- pay some one -->
+    </groups>
+    <test name="Default test" duration-ms="234" started-at="2021-02-12T11:09:00 IST" finished-at="2021-02-12T11:09:00 IST">
+      <class name="groups.Groupofclass">
+        <test-method status="PASS" signature="ex1()[pri:0, instance:groups.Groupofclass@51e2adc7]" name="ex1" duration-ms="16" started-at="2021-02-12T11:09:00 IST" finished-at="2021-02-12T11:09:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ex1 -->
+        <test-method status="PASS" signature="ex2()[pri:0, instance:groups.Groupofclass@51e2adc7]" name="ex2" duration-ms="1" started-at="2021-02-12T11:09:00 IST" finished-at="2021-02-12T11:09:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ex2 -->
+        <test-method status="PASS" signature="ex3()[pri:0, instance:groups.Groupofclass@51e2adc7]" name="ex3" duration-ms="1" started-at="2021-02-12T11:09:00 IST" finished-at="2021-02-12T11:09:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ex3 -->
+        <test-method status="PASS" signature="ex4()[pri:0, instance:groups.Groupofclass@51e2adc7]" name="ex4" duration-ms="1" started-at="2021-02-12T11:09:00 IST" finished-at="2021-02-12T11:09:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ex4 -->
+        <test-method status="PASS" signature="ex5()[pri:0, instance:groups.Groupofclass@51e2adc7]" name="ex5" duration-ms="1" started-at="2021-02-12T11:09:00 IST" finished-at="2021-02-12T11:09:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ex5 -->
+      </class> <!-- groups.Groupofclass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

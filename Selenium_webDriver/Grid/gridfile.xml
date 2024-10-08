@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+ 
+  
+ <test name="Firefox1 Test"> 
+  <parameter name='browser' value="firefox"/> 
+    <classes> 
+       <class name="grid.newGrid"/>  
+    </classes> 
+  </test>  
+
+
+  <test name="Firefox2 Test"> 
+  <parameter name='browser' value="firefox1"/> 
+    <classes> 
+     <class name="grid.newGrid"/> 
+    </classes> 
+  </test>  
+ 
+   
+  <test name="Firefox3 Test"> 
+  <parameter name='browser' value="firefox2"/> 
+    <classes> 
+      <class name="grid.newGrid"/> 
+    </classes> 
+  </test>  
+
+</suite> 
+
