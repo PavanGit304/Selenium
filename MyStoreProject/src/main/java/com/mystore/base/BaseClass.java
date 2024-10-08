@@ -71,7 +71,8 @@ public class BaseClass  {
 //     	prefs.put("profile.default_content_setting_values.notifications", 2);
 //     	System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver128\\chromedriver-win64\\chromedriver.exe"); 
 //        String browserName = prop.getProperty("browser");
-		
+
+//it checks the value of browserName is equal to "chrome" but ignores case differences( eg."chrome" or "CHROME",Chrome would also match)		
 		if(browserName.equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().setup();
 //			ChromeOptions options = new ChromeOptions(); //OR FirefoxOptions options2 = new FirefoxOptions();
