@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="4" ignored="0" total="5" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="282556" started-at="2020-06-23T20:48:41 CAT" finished-at="2020-06-23T20:53:24 CAT">
+    <groups>
+      <group name="AVAF_relese1">
+        <method signature="AVAF.avaf_hub()[pri:0, instance:Selenium.AVAF.AVAF@782663d3]" name="avaf_hub" class="Selenium.AVAF.AVAF"/>
+        <method signature="AVAF.selectDate_mthod()[pri:2, instance:Selenium.AVAF.AVAF@782663d3]" name="selectDate_mthod" class="Selenium.AVAF.AVAF"/>
+        <method signature="AVAF.transaction_mthod()[pri:1, instance:Selenium.AVAF.AVAF@782663d3]" name="transaction_mthod" class="Selenium.AVAF.AVAF"/>
+        <method signature="AVAF.transaction_mthod1()[pri:3, instance:Selenium.AVAF.AVAF@782663d3]" name="transaction_mthod1" class="Selenium.AVAF.AVAF"/>
+      </group> <!-- AVAF_relese1 -->
+      <group name="passcode">
+        <method signature="Passcode.passCode()[pri:0, instance:Selenium.AVAF.Passcode@42607a4f]" name="passCode" class="Selenium.AVAF.Passcode"/>
+      </group> <!-- passcode -->
+    </groups>
+    <test name="Test" duration-ms="282556" started-at="2020-06-23T20:48:41 CAT" finished-at="2020-06-23T20:53:24 CAT">
+      <class name="Selenium.AVAF.AVAF">
+        <test-method status="FAIL" signature="avaf_hub()[pri:0, instance:Selenium.AVAF.AVAF@782663d3]" name="avaf_hub" duration-ms="13154" started-at="2020-06-23T20:49:34 CAT" finished-at="2020-06-23T20:49:47 CAT">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TUMUKU', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.barclays.absa.banking.v..., appPackage: com.barclays.absa.banking.uat, automationName: Appium, databaseEnabled: false, desired: {appActivity: com.barclays.absa.banking.v..., appPackage: com.barclays.absa.banking.uat, automationName: Appium, deviceName: HUAWEI VNS-L31, noReset: true, platformName: android, platformVersion: 6.0, udid: 4TE7N16B25004195}, deviceApiLevel: 23, deviceManufacturer: HUAWEI, deviceModel: HUAWEI VNS-L31, deviceName: 4TE7N16B25004195, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: 4TE7N16B25004195, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 6.0, statBarHeight: 72, takesScreenshot: true, udid: 4TE7N16B25004195, viewportRect: {height: 1740, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 854bba21-4e58-4eb4-a07f-0e14c60d11f1
+*** Element info: {Using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains("Current balance").instance(0))}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TUMUKU', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.barclays.absa.banking.v..., appPackage: com.barclays.absa.banking.uat, automationName: Appium, databaseEnabled: false, desired: {appActivity: com.barclays.absa.banking.v..., appPackage: com.barclays.absa.banking.uat, automationName: Appium, deviceName: HUAWEI VNS-L31, noReset: true, platformName: android, platformVersion: 6.0, udid: 4TE7N16B25004195}, deviceApiLevel: 23, deviceManufacturer: HUAWEI, deviceModel: HUAWEI VNS-L31, deviceName: 4TE7N16B25004195, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: 4TE7N16B25004195, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 6.0, statBarHeight: 72, takesScreenshot: true, udid: 4TE7N16B25004195, viewportRect: {height: 1740, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 854bba21-4e58-4eb4-a07f-0e14c60d11f1
+*** Element info: {Using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains("Current balance").instance(0))}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.FindsByAndroidUIAutomator.findElementByAndroidUIAutomator(FindsByAndroidUIAutomator.java:38)
+at Selenium.AVAF.AVAF.avaf_hub(AVAF.java:22)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- avaf_hub -->
+        <test-method status="FAIL" signature="transaction_mthod()[pri:1, instance:Selenium.AVAF.AVAF@782663d3]" name="transaction_mthod" duration-ms="70651" started-at="2020-06-23T20:49:48 CAT" finished-at="2020-06-23T20:50:58 CAT">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Located by By.chained({By.xpath: //*[contains(@text,'Transactions')]}) (tried for 70 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({By.xpath: //*[contains(@text,'Transactions')]}) (tried for 70 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at PageObjectModel.PageObject_AVAF.transaction(PageObject_AVAF.java:56)
+at Selenium.AVAF.AVAF.transaction_mthod(AVAF.java:32)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.xpath: //*[contains(@text,'Transactions')]})
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(<generated>)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 30 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@2e185cd7 (tried for 1 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+... 37 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //*[contains(@text,'Transactions')]})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TUMUKU', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 39 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- transaction_mthod -->
+        <test-method status="FAIL" signature="selectDate_mthod()[pri:2, instance:Selenium.AVAF.AVAF@782663d3]" name="selectDate_mthod" duration-ms="72904" started-at="2020-06-23T20:50:59 CAT" finished-at="2020-06-23T20:52:12 CAT">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Located by By.chained({By.id: com.barclays.absa.banking.uat:id/calenderImageView}) (tried for 70 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({By.id: com.barclays.absa.banking.uat:id/calenderImageView}) (tried for 70 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at PageObjectModel.PageObject_AVAF.calender(PageObject_AVAF.java:63)
+at Selenium.AVAF.AVAF.selectDate_mthod(AVAF.java:38)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.id: com.barclays.absa.banking.uat:id/calenderImageView})
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(<generated>)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 30 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@6719a5b8 (tried for 1 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+... 37 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.barclays.absa.banking.uat:id/calenderImageView})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TUMUKU', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 39 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectDate_mthod -->
+        <test-method status="FAIL" signature="transaction_mthod1()[pri:3, instance:Selenium.AVAF.AVAF@782663d3]" name="transaction_mthod1" duration-ms="70636" started-at="2020-06-23T20:52:13 CAT" finished-at="2020-06-23T20:53:23 CAT">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Located by By.chained({By.xpath: //*[contains(@text,'Transactions')]}) (tried for 70 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({By.xpath: //*[contains(@text,'Transactions')]}) (tried for 70 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at PageObjectModel.PageObject_AVAF.transaction(PageObject_AVAF.java:56)
+at Selenium.AVAF.AVAF.transaction_mthod1(AVAF.java:47)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.xpath: //*[contains(@text,'Transactions')]})
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(<generated>)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 30 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@2b329bbd (tried for 1 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+... 37 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //*[contains(@text,'Transactions')]})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TUMUKU', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 39 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- transaction_mthod1 -->
+      </class> <!-- Selenium.AVAF.AVAF -->
+      <class name="Selenium.AVAF.Passcode">
+        <test-method status="PASS" signature="passCode()[pri:0, instance:Selenium.AVAF.Passcode@42607a4f]" name="passCode" duration-ms="12167" started-at="2020-06-23T20:49:21 CAT" finished-at="2020-06-23T20:49:33 CAT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- passCode -->
+      </class> <!-- Selenium.AVAF.Passcode -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

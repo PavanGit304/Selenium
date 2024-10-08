@@ -1,0 +1,35 @@
+package ExtentReport1;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.LogStatus;
+
+public class ExtentReport1Execution extends ExtentReport1Listner{
+
+	
+//	 @Test (groups= {"loginpage"})
+	public void execu() throws InterruptedException {
+//		 onStart(null);
+			System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver127\\chromedriver-win64\\chromedriver.exe");    
+			driver = new ChromeDriver();
+			driver.manage().window().maximize(); 
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+			driver.get("https://www.google.com/");
+	WebElement srch = driver.findElement(By.xpath("//*[@id=\"APjFqb\"]")); //*[@id="APjFqb"]
+	//Assert.assertEquals(srch.getText(), "Pay","check Pay button in Buttons Class" + "<br>");
+	
+	test.log(LogStatus.PASS, "srch"); 
+	srch .sendKeys("pawan kalyan photos",Keys.RETURN);//Keys.RETURN/Keys.ENTER  :it press enter
+	driver.findElement(By.xpath("//*[contains(text(),'330 Pavan kalyan ideas - Pinterest')]")).click();
+	test.log(LogStatus.INFO, "passed 1");
+	  //d.close();
+reports = new ExtentReports("./test-output/ScreenshotsandReports.html");
+	}
+}

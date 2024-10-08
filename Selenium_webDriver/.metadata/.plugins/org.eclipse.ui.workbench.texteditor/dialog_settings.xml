@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="Scroll"/>
+		<list key="findhistory">
+			<item value="scroll"/>
+			<item value="&lt;in"/>
+			<item value="in"/>
+			<item value="beneficiaryname"/>
+			<item value="&#x09;@Test (priority = 0, groups = {&quot;Pay_AbsaListedBeneficiary_OnceOff&quot;})"/>
+			<item value="amount"/>
+			<item value="amount()"/>
+			<item value="FutureDates"/>
+			<item value="Onceoffpayment"/>
+			<item value="// scroll"/>
+			<item value="wait = new"/>
+			<item value="My"/>
+			<item value="payaBill"/>
+			<item value="onceoffpayment"/>
+			<item value=" Thread.sleep(2000);"/>
+		</list>
+		<list key="replacehistory">
+			<item value="&lt;ex"/>
+			<item value="ex"/>
+			<item value="//wait = new"/>
+			<item value="// Thread.sleep(2000);"/>
+			<item value="// Thread.sleep(3000);"/>
+			<item value="//Thread.sleep(2000);"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1176"/>
+		<item key="DIALOG_Y_ORIGIN" value="222"/>
+		<item key="DIALOG_WIDTH" value="354"/>
+		<item key="DIALOG_HEIGHT" value="454"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="652"/>
+		<item key="DIALOG_Y_ORIGIN" value="362"/>
+	</section>
+</section>

@@ -1,0 +1,42 @@
+package Broswer;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class chrome {
+	
+	
+	public static void main(String args[])throws Exception
+	{
+		try {
+			System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromedriver.exe");  // to copy the path : Shift+Right click  on chrome driver copy as path and paste it  
+						
+						WebDriver d= new ChromeDriver();
+					d.manage().window().maximize(); 
+					d.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+					
+					d.get("https://www.google.com/");
+					d.findElement(By.xpath("//INPUT[@class='gLFyf gsfi']")).sendKeys("images");
+				
+					d.findElement(By.xpath("(//INPUT[@class='gNO89b'])[2]")).click();
+				    d.close();
+					
+				
+				
+					}
+					
+					catch (Exception e)
+					{
+						
+						System.out.println(e);
+					}
+					
+					
+		
+	}
+
+}

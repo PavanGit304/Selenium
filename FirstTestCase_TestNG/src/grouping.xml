@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false">
+  <test name="Practice Grouping">
+  
+<groups>
+<define name="All">
+	   		 <include name="Car"/>
+             <include name="SCooter"/>
+             </define>
+             <run>
+             <include name="All"/>
+             </run>
+</groups> 
+
+
+    <classes>
+      <class name="TestNG.Grouping"/>        
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <test name="Test">
+  <groups>
+  <run>
+  <include name="pay new beneficiary"/>
+  <include name ="pay some one"/>
+  <include name ="pay an Existing Beneficiary"/>
+  </run>
+  </groups>
+  
+    <classes>
+      <class name="groups.Groupofclass"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

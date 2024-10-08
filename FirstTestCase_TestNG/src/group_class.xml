@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite" parallel="false">
+  <test name="demo group">
+  
+  <groups>
+  <run>
+    <include name="test1"/>
+    <include name="test2"/>
+    <include name="test3"/>
+  </run>
+  </groups>
+
+    <classes>
+      <class name="TestNG.groupTestNG_class"/>
+      <class name="TestNG.second1"/>
+      <class name="TestNG.second12"/>
+      <!-- class name="TestNG.second1" -->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
