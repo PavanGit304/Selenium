@@ -35,7 +35,8 @@ public class BaseClass  {
 	public static Properties prop;
 //	public static WebDriver driver;
 	
-	//Declare ThreadLocal driver 
+	//ThreadLocal: it stores a separate value for each thread
+	//RemoteWebDriver: it drives the browser in remote setups like slenium grid
 	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<RemoteWebDriver>();
 	
 	public static WebDriver getDriver() {
