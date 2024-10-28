@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <parameter name="browser" value="firefox2"/>
+  <test name="Firefox1 Test(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="grid.newGrid">
+        <methods>
+          <include name="launchapp"/>
+          <include name="launchapp"/>
+          <include name="launchapp"/>
+          <include name="googleTest"/>
+        </methods>
+      </class> <!-- grid.newGrid -->
+    </classes>
+  </test> <!-- Firefox1 Test(failed) -->
+  <test name="Firefox2 Test(failed)">
+    <parameter name="browser" value="firefox1"/>
+    <classes>
+      <class name="grid.newGrid">
+        <methods>
+          <include name="launchapp"/>
+          <include name="launchapp"/>
+          <include name="launchapp"/>
+          <include name="googleTest"/>
+        </methods>
+      </class> <!-- grid.newGrid -->
+    </classes>
+  </test> <!-- Firefox2 Test(failed) -->
+  <test name="Firefox3 Test(failed)">
+    <parameter name="browser" value="firefox2"/>
+    <classes>
+      <class name="grid.newGrid">
+        <methods>
+          <include name="launchapp"/>
+          <include name="launchapp"/>
+          <include name="launchapp"/>
+          <include name="googleTest"/>
+        </methods>
+      </class> <!-- grid.newGrid -->
+    </classes>
+  </test> <!-- Firefox3 Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
