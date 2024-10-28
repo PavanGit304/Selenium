@@ -35,9 +35,11 @@ public class BaseClass  {
 	public static Properties prop;
 //	public static WebDriver driver;
 	
-	//Declare ThreadLocal driver 
+	//ThreadLocal: it stores a separate value for each thread
+	//RemoteWebDriver: it drives the browser in remote setups like slenium grid
+	//why ThreadLocal<RemoteWebDriver>: Parallel Testing(it prevents issues when running tests simultaneously, avoiding conflicts between threads.)
 	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<RemoteWebDriver>();
-	
+	//getDriver:it get the RemoteWebDriver instance for the current thread
 	public static WebDriver getDriver() {
 		//get driver from threadLocalmap
 		return driver.get();
@@ -45,8 +47,8 @@ public class BaseClass  {
 	
 	@BeforeSuite(groups= {"Smoke","Sanity","Regression"})
 	public void loadConfig() {
-		ExtentManger.setExtent();
-		DOMConfigurator.configure("log4j.xml");
+		ExtentManger.setExtent(); //it Initializes ExtentReports to generate test reports.
+		DOMConfigurator.configure("log4j.xml");// Configures Log4j for logging based on settings in the log4j.xml file.
 		
 //		loadConfig	
 		try {
@@ -69,9 +71,12 @@ public class BaseClass  {
 //     	prefs.put("profile.default_content_setting_values.notifications", 2);
 //     	System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\selenium_softwares\\Drivers\\chromeDriver\\Chromedriver128\\chromedriver-win64\\chromedriver.exe"); 
 //        String browserName = prop.getProperty("browser");
-		
+
+//it checks the value of browserName is equal to "chrome" and ignores case differences( eg."chrome" or "CHROME",Chrome would also match)		
 		if(browserName.equalsIgnoreCase("Chrome")) {
-			WebDriverManager.chromedriver().setup();
+
+			
+			WebDriverManager.chromedriver().setup(); // it automatically downloads and sets up the ChromeDriver and ensuring the correct version is used 
 //			ChromeOptions options = new ChromeOptions(); //OR FirefoxOptions options2 = new FirefoxOptions();
 //			options.setExperimentalOption("prefs", prefs);
 			driver.set(new ChromeDriver());    //driver = new ChromeDriver(options);
