@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="Report_Listener.MyListener"/>
+  </listeners>
+  <test thread-count="5" name="Test1(failed)">
+    <groups>
+      <run>
+        <include name="passcode"/>
+        <include name="Pay_AbsaListedBeneficiary_FutureDated"/>
+        <exclude name="pay_new_beneficiary"/>
+        <exclude name="payment_Details"/>
+        <exclude name="pay_An_Existing_Beneficiary"/>
+        <exclude name="pay_Future_Dated_For_An_ExistingBeneficiary"/>
+        <exclude name="Pay_AbsaListedBeneficiary_OnceOff"/>
+        <exclude name="Pay_AbsaListed_BeneficiaryNew"/>
+        <exclude name="Absa_Listed"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="pay.Pay">
+        <methods>
+          <include name="PayAbsaListedBeneficiaryFutureDated"/>
+        </methods>
+      </class> <!-- pay.Pay -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->
