@@ -17,6 +17,7 @@ import com.mystore.pageobjects.OrderSummary;
 import com.mystore.pageobjects.PaymentPage;
 import com.mystore.pageobjects.SearchResultPage;
 import com.mystore.pageobjects.ShippingPage;
+import com.mystore.utility.ConfigManager;
 
 public class EndtoEndTest extends BaseClass {
 	
@@ -55,7 +56,7 @@ public class EndtoEndTest extends BaseClass {
 //		orderPage.getTotalPrice();
 		addToCartpage.clickOnCheckOut();//loginPage= orderPage.clickOnCheckOut();
 		
-		homePage =loginPage.login(prop.getProperty("username"), prop.getProperty("password"));//addressPage=loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
+		homePage =loginPage.login(ConfigManager.get("username"), ConfigManager.get("password"));//addressPage=loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
 		addressPage.clikOnEdit();
 		shippingPage = addressPage.verifyShippingAddress();
 		paymentPage = shippingPage.clickOnContinue();

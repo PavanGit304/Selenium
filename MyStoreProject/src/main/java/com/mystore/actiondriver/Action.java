@@ -1,6 +1,7 @@
 package com.mystore.actiondriver;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
@@ -10,6 +11,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.OutputType;
@@ -27,55 +30,48 @@ import com.mystore.base.BaseClass;
 
 public class Action extends BaseClass{
 
-
+	private static final Logger logger = LogManager.getLogger(Action.class);
 	
 	public static void scrollByVisibilityOfElement(WebDriver driver, WebElement ele) {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView();", ele);
-
+		try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView();", ele);
+            logger.info("Successfully scrolled to the element.");
+        } catch (Exception e) {
+            logger.error("Error occurred while scrolling to the element.", e);
+        }
 	}
 
 	public static boolean click(WebDriver driver, WebElement ele) {
-
-		Actions act = new Actions(driver);
-		act.moveToElement(ele).click().build().perform();
-		return false;
-
+	    try {
+            Actions act = new Actions(driver);
+            act.moveToElement(ele).click().build().perform();
+            logger.info("Successfully clicked on the element.");
+            return true;
+        } catch (Exception e) {
+            logger.error("Error occurred while clicking the element.", e);
+            return false;
+        }
 	}
 
 	public static boolean findElement(WebDriver driver, WebElement ele) {
-		boolean flag = false;
-		try {
-			ele.isDisplayed();
-			flag = true;
-		} catch (Exception e) {
-			// System.out.println("Location not found: "+locatorName);
-			flag = false;
-		} finally {
-			if (flag) {
-				System.out.println("Successfully Found element at");
-
-			} else {
-				System.out.println("Unable to locate element at");
-			}
-		}
-		return flag;
+		 try {
+	            boolean isFound = ele.isDisplayed();
+	            if (isFound) {
+	                logger.info("Successfully found the element.");
+	            } else {
+	                logger.warn("Element is not visible.");
+	            }
+	            return isFound;
+	        } catch (Exception e) {
+	            logger.error("Error occurred while finding the element.", e);
+	            return false;
+	        }
 	}
 
 	public static boolean isDisplayed(WebDriver driver, WebElement ele) {
-		boolean flag = false;
-		flag = findElement(driver, ele);
-		if (flag) {
-			flag = ele.isDisplayed();
-			if (flag) {
-				System.out.println("The element is Displayed");
-			} else {
-				System.out.println("The element is not Displayed");
-			}
-		} else {
-			System.out.println("Not displayed ");
-		}
-		return flag;
+		return findElement(driver, ele) && ele.isDisplayed();
+
 	}
 
 	public boolean isSelected(WebDriver driver, WebElement ele) {
@@ -118,25 +114,20 @@ public class Action extends BaseClass{
 	 * @return - true/false
 	 */
 	public static boolean type(WebElement ele, String text) {
-		boolean flag = false;
 		try {
-			flag = ele.isDisplayed();
-			ele.clear();
-			ele.sendKeys(text);
-			// logger.info("Entered text :"+text);
-			flag = true;
-		} catch (Exception e) {
-			System.out.println("Location Not found");
-			flag = false;
-		} finally {
-			if (flag) {
-				System.out.println("Successfully entered value");
-			} else {
-				System.out.println("Unable to enter value");
-			}
-
-		}
-		return flag;
+            if (ele.isDisplayed()) {
+                ele.clear();
+                ele.sendKeys(text);
+                logger.info("Successfully typed text: {}", text);
+                return true;
+            } else {
+                logger.warn("Element not displayed to type text.");
+                return false;
+            }
+        } catch (Exception e) {
+            logger.error("Error occurred while typing text: {}", text, e);
+            return false;
+        }
 	}
 
 	public boolean selectBySendkeys(String value,WebElement ele) {
@@ -250,29 +241,43 @@ public class Action extends BaseClass{
 	}
 
 	public boolean mouseHoverByJavaScript(WebElement ele) {
-		boolean flag = false;
+		
 		try {
-			WebElement mo = ele;
-			String javaScript = "var evObj = document.createEvent('MouseEvents');"
-					+ "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);"
-					+ "arguments[0].dispatchEvent(evObj);";
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript(javaScript, mo);
-			flag = true;
-			return true;
-		}
-
-		catch (Exception e) {
-
-			return false;
-		} finally {
-			if (flag) {
-				System.out.println("MouseOver Action is performed");
-			} else {
-				System.out.println("MouseOver Action is not performed");
-			}
-		}
+            String javaScript = "var evObj = document.createEvent('MouseEvents');"
+                + "evObj.initMouseEvent(\"mouseover\", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);"
+                + "arguments[0].dispatchEvent(evObj);";
+            JavascriptExecutor js = (JavascriptExecutor) getDriver(); // The filed BaseClass.driver is not visible 
+            js.executeScript(javaScript, ele);
+            logger.info("Mouse hover performed via JavaScript.");
+            return true;
+        } catch (Exception e) {
+            logger.error("Failed to perform mouse hover: ", e);
+            return false;
+        }
 	}
+//		boolean flag = false;
+//		try {
+//			WebElement mo = ele;
+//			String javaScript = "var evObj = document.createEvent('MouseEvents');"
+//					+ "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);"
+//					+ "arguments[0].dispatchEvent(evObj);";
+//			JavascriptExecutor js = (JavascriptExecutor) driver;
+//			js.executeScript(javaScript, mo);
+//			flag = true;
+//			return true;
+//		}
+//
+//		catch (Exception e) {
+//
+//			return false;
+//		} finally {
+//			if (flag) {
+//				System.out.println("MouseOver Action is performed");
+//			} else {
+//				System.out.println("MouseOver Action is not performed");
+//			}
+//		}
+	
 
 	public boolean JSClick(WebDriver driver, WebElement ele) throws Exception {
 		boolean flag = false;
@@ -729,25 +734,129 @@ public class Action extends BaseClass{
 		driver.manage().timeouts().pageLoadTimeout(timeOut, TimeUnit.SECONDS);
 	}
 	
-	public static String screenShot(WebDriver driver, String filename) {
-		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
-		File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
-		String destination = System.getProperty("user.dir") + "\\ScreenShot\\" + filename + "_" + dateName + ".png";
+	public static String screenShot(WebDriver driver, String screenshotName) {
+//		 String dateName = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+//
+//		    TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+//		    File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
+//		    String destinationPath = System.getProperty("user.dir") + "/Screenshots/" + screenshotName + dateName + ".png";
+//		    try {
+//		        FileUtils.copyFile(source, new File(destinationPath));
+//		    } catch (IOException e) {
+//		        logger.error("Screenshot saving failed", e);
+//		    }
+//		    return destinationPath;
+		
+		
+		
+		
+		 String dateName = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+	        File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-		try {
-			FileUtils.copyFile(source, new File(destination));
-		} catch (Exception e) {
-			e.getMessage();
-		}
-		// This new path for jenkins
-		String newImageString = "http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/" + filename + "_"
-				+ dateName + ".png";
-		return newImageString;
+	        String screenshotDir = System.getProperty("user.dir") + "/test-output/Screenshots/";
+	        new File(screenshotDir).mkdirs();
+
+	        String destination = screenshotDir + screenshotName + "_" + dateName + ".png";
+	        try {
+	            File finalDest = new File(destination);
+	            FileUtils.copyFile(source, finalDest);
+	            return destination;
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	            return null;
+	        }
+		
+		
+		
+		    
+//		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+//		
+//		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+//		File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
+//		
+//		String destination = System.getProperty("user.dir") + "\\ScreenShot\\" + filename + "_" + dateName + ".png";
+//
+//		try {
+//			FileUtils.copyFile(source, new File(destination));
+//		} catch (Exception e) {
+//			e.getMessage();
+//		}
+//		// This new path for jenkins
+//		String newImageString = "http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/" + filename + "_"
+//				+ dateName + ".png";
+//		return newImageString;
 	}
+	
+	
+	
 	public String getCurrentTime() {
 		String currentDate = new SimpleDateFormat("yyyy-MM-dd-hhmmss").format(new Date());
 		return currentDate;
 	}
 
 }
+
+
+
+
+
+
+/*
+ Action class is a custom utility/helper class in a Selenium framework.
+ It provides reusable methods for interacting with web elements, like clicking, typing, selecting from dropdowns, switching windows/frames, handling mouse actions, etc.
+ * 
+ * 
+ 
+ 
+ 
+ 🔧 Real-life examples for each method category:
+ 📜 Scrolling & Clicking
+scrollByVisibilityOfElement – Like scrolling a webpage to bring a button into view.
+click – Like clicking a button with a mouse.
+JSClick – Clicking a button using JavaScript (useful when regular click doesn’t work).
+
+✍️ Typing and Selecting
+type – Like typing your name into a form field.
+selectByVisibleText/Index/Value – Like picking a value from a dropdown (e.g., selecting a country).
+selectBySendkeys – Like manually typing in a dropdown (not recommended in modern apps).
+
+👁️ Element Checks
+isDisplayed – Checks if something is visible on the screen.
+isSelected – Like checking if a checkbox is ticked.
+isEnabled – Like checking if a button is clickable.
+
+🖱️ Mouse Actions
+mouseOverElement / mouseover – Like hovering the mouse over a menu.
+draggable – Drag an element like moving a sticky note.
+draganddrop – Pick up a file and drop it in a folder.
+slider – Slide a volume control.
+rightclick – Right-clicking on a file for options.
+mouseHoverByJavaScript – Hover using JavaScript when normal hover fails.
+
+🪟 Frames and Windows
+switchToFrameByIndex/Id/Name – Like changing the view to a different section (iframe) on the same page.
+switchToDefaultFrame – Going back to the main page.
+switchWindowByTitle – Switching browser tabs by their title.
+switchToNewWindow – Move focus to a new tab.
+switchToOldWindow – Go back to the original tab.
+
+📊 Tables
+getColumncount – Count how many cells are in a table row (e.g., how many columns are shown in a table row).
+
+
+ 
+ 
+ 
+ ✅ Summary of Key Fixes to Prioritize
+ 
+ Area              | Priority  | Suggestion
+Logging            | 🔥 High   | Use Log4j2
+Exception handling | 🔥 High   | Standardize/log or rethrow
+Static vs Instance use | 🔥 High | Be consistent
+Thread.sleep usage | 🚫 Remove | Use waits instead
+Naming conventions | ✅ Medium | Normalize method names
+JavaDocs & comment | ✅ Medium | Add missing docs
+Code duplication   | ✅ Medium | Refactor repeated logic
+ 
+ 
+ * */

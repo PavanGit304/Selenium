@@ -11,6 +11,7 @@ import com.mystore.pageobjects.AccountCreationPage;
 import com.mystore.pageobjects.HomePage;
 import com.mystore.pageobjects.IndexPage;
 import com.mystore.pageobjects.LoginPage;
+import com.mystore.utility.ConfigManager;
 
 public class AccountCreationPageTest extends BaseClass{
 
@@ -35,7 +36,7 @@ public class AccountCreationPageTest extends BaseClass{
 //		Log.startTestCase("verifyCreateAccountPageTest");
 		indexPage= new IndexPage();
 		loginPage=indexPage.clickOnSignIn();
-		loginPage.createNewAccount(prop.getProperty("newAccount"), prop.getProperty("newPassword"));	
+		loginPage.createNewAccount(ConfigManager.get("newAccount"), ConfigManager.get("newPassword"));	
 //		boolean result=accountCreationPage.ValidateCreateMyAccount();
 //		Assert.assertTrue(result);
 //		 Log.endTestCase("verifyCreateAccountPageTest");
