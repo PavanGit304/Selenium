@@ -93,6 +93,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.2.3</version> <!-- Stable version -->
 				<configuration>
+				  <argLine>-Dfile.encoding=UTF-8</argLine>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
@@ -113,6 +114,7 @@
 						<arg>
 							jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
 					</compilerArgs>
+					<encoding>UTF-8</encoding> <!-- Add this line -->
 				</configuration>
 			</plugin>
 
