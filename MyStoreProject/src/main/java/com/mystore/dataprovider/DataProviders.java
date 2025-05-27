@@ -1,6 +1,6 @@
 package com.mystore.dataprovider;
 
-import java.io.IOException;
+import java.io.IOException; 
 
 import org.testng.annotations.DataProvider;
 
@@ -72,11 +72,11 @@ The data is then used in the test methods with the @DataProvider(name = "credent
 Brief explanation 
 
 
-DataProvider: The @DataProvider annotation is used to provide the test data. It’s named "credentials" and fetches data from an Excel sheet.
+DataProvider: The @DataProvider annotation is used to provide the test data. Itï¿½s named credentials and fetches data from an Excel sheet.
 
 Excel Path: The path to the Excel file (TestData.xlsx) is stored in a constant (EXCEL_PATH).
 
-Data Fetching: The getCredentialsData() method calls fetchData() to read data from the "Credentials" sheet.
+Data Fetching: The getCredentialsData() method calls fetchData() to read data from the Credentials sheet.
 
 fetchData() Method:
 It uses the NewExcelLibrary class to get row and column counts.
@@ -86,6 +86,7 @@ Test Method Usage: The test method can use the @DataProvider(name = "credentials
 
 
 
+*/
 
 
 
@@ -93,59 +94,3 @@ Test Method Usage: The test method can use the @DataProvider(name = "credentials
 
 
 
-
-**************************************************Old Code *******************************************************
-
-
-NewExcelLibrary  obj = new NewExcelLibrary();
-	
-	@DataProvider(name ="credentials")
-	public static Object[][] getData() throws IOException { //object[][] it is 2d object array for calling all data using data provider 
-		String path ="E:\\Selenium\\eclipse\\MyStoreProject\\src\\test\\resources\\TestData\\TestData.xlsx";
-		return getCredentials(path);
-	}
-	
-	
-	public static  Object[][] getCredentials(String path) {
-		NewExcelLibrary  obj = new NewExcelLibrary(path);
-		// Totals rows count
-		int rows = obj.getRowCount("Credentials"); // pass the sheet name ex:Credentials. getRowCount: it gets the row count 
-		// Total Columns
-		int column = obj.getColumnCount("Credentials");// pass the sheet name ex:Credentials. getRowCount: it gets the column  count 
-		int actRows = rows - 1;
-
-		Object[][] data = new Object[actRows][column];
-
-		for (int i = 0; i < actRows; i++) {
-			for (int j = 0; j < column; j++) {
-				data[i][j] = NewExcelLibrary.getCellData("Credentials", j, i + 2);	
-			}
-		}
-		return data;
-	}
-	
-	
-	
-	
-	
-//	@DataProvider(name = "credentials")
-//	public   Object[][] getCredentials() {
-//	
-//		// Totals rows count
-//		int rows = obj.getRowCount("Credentials"); // pass the sheet name ex:Credentials. getRowCount: it gets the row count 
-//		// Total Columns
-//		int column = obj.getColumnCount("Credentials");// pass the sheet name ex:Credentials. getRowCount: it gets the column  count 
-//		int actRows = rows - 1;
-//
-//		Object[][] data = new Object[actRows][column];
-//
-//		for (int i = 0; i < actRows; i++) {
-//			for (int j = 0; j < column; j++) {
-//				data[i][j] = obj.getCellData("Credentials", j, i +2 ); 
-//			}
-//		}
-//		return data;
-//	}
-
-
- * */
