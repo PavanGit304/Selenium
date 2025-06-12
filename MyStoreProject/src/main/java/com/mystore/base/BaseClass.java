@@ -62,10 +62,10 @@ public class BaseClass  {
     	    
     	    WebDriver browserDriver;
     	    
-    	    if (runMode.equalsIgnoreCase("browserstack")) {
-    	        browserDriver = setupBrowserStack(browserName);
+    	    if (runMode.equalsIgnoreCase("Local")) { // if parameter is local then it execute local browser(execute real chrome) else it execute in browserstack  
+    	        browserDriver = setupBrowserStack(browserName); // browserstack execution
     	    } else {
-    	        browserDriver = createBrowserDriver_setupLocal(browserName);
+    	        browserDriver = Local(browserName); // local execution
     	    }	       
         driver.set(browserDriver);
         getDriver().manage().window().maximize();
@@ -74,7 +74,7 @@ public class BaseClass  {
     }
 
     
-    private static WebDriver createBrowserDriver_setupLocal(String browserName) {
+    private static WebDriver Local(String browserName) {
     	
 //    	boolean isHeadless = ConfigManager.get("headless").equalsIgnoreCase("true");
     	String isHeadlessConfig = ConfigManager.get("headless");
@@ -156,14 +156,14 @@ public class BaseClass  {
     public void tearDown() {
         if (getDriver() != null) {
             getDriver().quit();
-            driver.remove();
+            driver.remove(); // clear the WebDriver from the current thread to avoid memory leaks
         }
         logger.info("Test execution finished");
     }
     
-    public static void removeDriver() {
-        driver.remove();
-    } 
+//    public static void removeDriver() {
+//        driver.remove();
+//    } 
 }
 
 
@@ -171,7 +171,54 @@ public class BaseClass  {
 
 /*
  * 
- * 
+🎯 Purpose:
+The BaseClass sets up and manages the WebDriver instance (both local or  BrowserStack execution), loads configuration, and handles browser launching and closing
+, and uses ThreadLocal for parallel testing.
+
+🧱 Key Components:
+
+✅ ThreadLocal<WebDriver>:
+
+Used to manage separate browser sessions for parallel test execution.
+
+✅ getDriver():
+
+Returns the current thread’s WebDriver instance.
+
+✅ @BeforeSuite - setup():
+
+Runs once before the entire suite. Loads config and logs start message.
+
+✅ launchApp(String browserName):
+
+Launches the application in the specified browser (Chrome, Firefox, Edge)
+
+Supports local or BrowserStack based on config value "run.mode"
+
+Opens the URL from config and sets window size and timeouts.
+
+✅ createBrowserDriver_setupLocal():
+
+Creates local browser drivers (Chrome, Firefox, Edge).
+
+Supports headless mode based on config.
+
+✅ setupBrowserStack():
+
+Connects to BrowserStack using credentials and desired capabilities.
+
+Supports config-driven browser, OS, and version setup.
+
+✅ @AfterSuite - tearDown():
+
+Quits the browser and cleans up WebDriver instance after test suite runs.
+
+✅ Logging:
+
+Uses Log4j to log all key steps (starting test, launching browser, etc.).
+
+
+
   Real-Time Use Case Comparison    browserstackOptions.put("local", "false");
 Scenario	                                            local = true	local = false
 Testing a dev/staging site on localhost or internal IP	✅ Required	    ❌ Not suitable
