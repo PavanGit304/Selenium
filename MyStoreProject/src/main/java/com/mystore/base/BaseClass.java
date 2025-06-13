@@ -161,9 +161,9 @@ public class BaseClass  {
         logger.info("Test execution finished");
     }
     
-//    public static void removeDriver() {
-//        driver.remove();
-//    } 
+    public static void removeDriver() {
+        driver.remove();
+    } 
 }
 
 
